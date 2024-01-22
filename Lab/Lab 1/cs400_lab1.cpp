@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 // what header is needed for square root function ?? 
-// #include <???>
+# include <cmath>
 
 // TODO: complete prime tester function 
 // TA: please explain this part to the class. Then ask students to complete main function
@@ -10,14 +10,14 @@
 bool isPrime( int number){
     // TODO: complete the condition here 
     // guard negative numbers, 0 and 1, as they are not considered as prime numbers.  
-    if ( /*CONDITION*/ ) {
+    if ( number < 2 {
         return false; 
     }
 
     // TODO: complete the for loop to test all possible factors
     // possible factors starts from 2 (inclusive) and goes all the way to sqrt(n) + 1 (inclusive) 
-    for (/* LOOP */ ){ 
-        if (/* if evenly divisible by factor, then not a prime number */)
+    for (number, sqrt(number), number + 1) {
+        if (number % number != 1)
             return false; 
         }
 
@@ -60,6 +60,16 @@ int main(){
     18 is NOT a prime number. 
     19 is a prime number.
     */
+    isPrime(2);
+
+    if (isPrime = true)
+    {
+        cout << number << " is a prime number." << endl;
+    }
+    else
+    {
+        cout << number << " is not a prime number." << endl;
+    }
 
     // question 2's code. 
     // Please complete the function the10001PrimeNumber() first, 
