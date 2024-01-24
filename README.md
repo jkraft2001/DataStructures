@@ -4,4 +4,4 @@ Collection of .cpp and .h lab and homework files related to my Spring 2024 Data 
 Files are organized into three folders:
  * Homework - collection of homework code files and assignments.
  * Labs - collection of lab code files and assignments.
- * Source - source code examples provided for student use by the course instructor.
+ * Source - source code examples provided for student use by the course instructor. Can include .cpp and .h files, as well as slides from presentations explaining the solutions.
