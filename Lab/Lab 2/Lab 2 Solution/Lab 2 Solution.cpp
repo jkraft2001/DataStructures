@@ -19,7 +19,7 @@ bool isSet(const std::vector<int>& vec) {
 }
 
 int main() {
-    std::vector<int> vec1 = { 1, 4, 6, 6, 9 };
+    std::vector<int> vec1 = { 1, 4, 5, 6, 9 };
     std::vector<int> vec2 = { 1, 4, 5, 6, 1 };
 
     std::cout << "Vector 1 is a set: " << std::boolalpha << isSet(vec1) << std::endl;
