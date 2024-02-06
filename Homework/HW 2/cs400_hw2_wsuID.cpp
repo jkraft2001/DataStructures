@@ -8,7 +8,22 @@
 // TODO: implement this function to return a Pascal Triangle
 std::vector<std::vector<int>> pascalTriangle(int row) {
 
-    return {};
+    if (numRows < 1 || numRows > 16) {
+        return {}; // Return empty vector for invalid input
+    }
+
+    std::vector<std::vector<int>> triangle(numRows);
+
+    for (int i = 0; i < numRows; ++i) {
+        triangle[i].resize(i + 1);
+        triangle[i][0] = triangle[i][i] = 1; // First and last element of each row is 1
+
+        for (int j = 1; j < i; ++j) {
+            triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j];
+        }
+    }
+
+    return triangle;
 }
 
 // TODO: implement this function to print Pascal Triangles 
@@ -20,7 +35,12 @@ void printPascalTriangle(const std::vector<std::vector<int>>& triangle) {
 std::vector<bool> compare(const std::vector<std::vector<int>>& triangle,
                           const std::vector<int> allegedSummations ) {
 
-    return {};
+    std::vector<bool> comparisonResults;
+    for (size_t i = 0; i < triangle.size(); ++i) {
+        int actualSum = std::accumulate(triangle[i].begin(), triangle[i].end(), 0);
+        comparisonResults.push_back(actualSum == allegedSummations[i]);
+    }
+    return comparisonResults;
 
 }
      
