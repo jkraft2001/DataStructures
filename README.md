@@ -5,3 +5,4 @@ Files are organized into three folders:
  * Homework - collection of homework code files and assignments.
  * Labs - collection of lab code files and assignments.
  * Source - source code examples provided for student use by the course instructor. Can include .cpp and .h files, as well as slides from presentations explaining the solutions.
+ * Notes - code written by me during class, condensed to help me study. For example purposes only.
