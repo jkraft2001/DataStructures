@@ -30,6 +30,7 @@ public:
             delete[] array;
             array = newArray;
         }
+        // warning to not write elements past the end of the array. https://stackoverflow.com/questions/58563272/how-to-solve-c6386-warning
         array[currentSize++] = element;
     }
 
@@ -45,21 +46,27 @@ public:
         if (index >= 0 && index <= currentSize) {
             if (currentSize == capacity) {
                 capacity *= 2;
+                // insert new value
                 T* newArray = new T[capacity];
                 for (size_t i = 0; i < index; ++i) {
                     newArray[i] = array[i];
                 }
+                // copy elements after the insertion point
                 newArray[index] = element;
                 for (size_t i = index; i < currentSize; ++i) {
+                    // warning details in above comment.
                     newArray[i + 1] = array[i];
                 }
+                // DELETE
                 delete[] array;
                 array = newArray;
             }
             else {
+                // shift elements to make room for the new one
                 for (size_t i = currentSize; i > index; --i) {
                     array[i] = array[i - 1];
                 }
+                // insert the new one
                 array[index] = element;
             }
             ++currentSize;
