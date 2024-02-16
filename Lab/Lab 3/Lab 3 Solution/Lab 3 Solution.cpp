@@ -1,5 +1,100 @@
 #include <iostream>
 
+
+// Vector Class Implementation:
+
+class Vector {
+private:
+    int* array;
+    int capacity;
+    int current_size;
+
+public:
+    // Constructor
+    Vector(int initial_capacity = 10) {
+        capacity = initial_capacity;
+        array = new int[capacity];
+        current_size = 0;
+    }
+
+    // Destructor
+    ~Vector() {
+        delete[] array;
+    }
+
+    // Add an element to the end of the vector
+    void push_back(int element) {
+        if (current_size == capacity) {
+            // Increase capacity by doubling it
+            capacity *= 2;
+            int* new_array = new int[capacity];
+            for (int i = 0; i < current_size; ++i) {
+                new_array[i] = array[i];
+            }
+            delete[] array;
+            array = new_array;
+        }
+        array[current_size++] = element;
+    }
+
+    // Remove the last element from the vector
+    void pop_back() {
+        if (current_size > 0) {
+            --current_size;
+        }
+    }
+
+    // Insert an element at a specific position
+    void insert(int position, int element) {
+        if (position >= 0 && position <= current_size) {
+            if (current_size == capacity) {
+                capacity *= 2;
+                int* new_array = new int[capacity];
+                for (int i = 0; i < position; ++i) {
+                    new_array[i] = array[i];
+                }
+                new_array[position] = element;
+                for (int i = position; i < current_size; ++i) {
+                    new_array[i + 1] = array[i];
+                }
+                delete[] array;
+                array = new_array;
+                ++current_size;
+            }
+            else {
+                for (int i = current_size; i > position; --i) {
+                    array[i] = array[i - 1];
+                }
+                array[position] = element;
+                ++current_size;
+            }
+        }
+    }
+
+    // Erase an element at a specific position
+    void erase(int position) {
+        if (position >= 0 && position < current_size) {
+            for (int i = position; i < current_size - 1; ++i) {
+                array[i] = array[i + 1];
+            }
+            --current_size;
+        }
+    }
+
+    // Get the element at a specific index
+    int& operator[](int index) {
+        return array[index];
+    }
+
+    // Get the current size of the vector
+    int size() {
+        return current_size;
+    }
+};
+
+
+// Template Class Implementation:
+/*
 template<typename T>
 class Vector {
 private:
@@ -96,9 +191,12 @@ public:
         return currentSize;
     }
 };
+*/
 
 int main() {
-    Vector<int> vec;
+    Vector vec;
+    //Vector<int> vec; un-comment this to test Template case.
+
     vec.push_back(1);
     vec.push_back(2);
     vec.push_back(3);
