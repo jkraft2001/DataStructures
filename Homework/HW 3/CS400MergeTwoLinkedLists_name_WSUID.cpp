@@ -1,38 +1,74 @@
-// CS400MergeTwoLinkedLists.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 
 struct Node {
-    //TODO:
+    int data;
+    Node* next;
 
-
+    Node(int d) : data(d), next(nullptr) {}
 };
 
 typedef Node* NodePtr;
 
 // Function to create a new node with the given data
 NodePtr createNode(int data) {
-    //TODO:
-
-
+    return new Node(data);
 }
 
 // Function to print the linked list
 void printList(NodePtr head) {
-    //TODO:
-
-
+    NodePtr current = head;
+    while (current != nullptr) {
+        std::cout << current->data << " ";
+        current = current->next;
+    }
+    std::cout << std::endl;
 }
 
+// Function to rearrange the linked list such that odd numbers appear before even numbers
+NodePtr rearrangeLinkedList(NodePtr head) {
+    // If the list is empty or contains only one node, no rearrangement is needed
+    if (head == nullptr || head->next == nullptr)
+        return head;
 
+    NodePtr oddHead = nullptr; // Head of the odd numbers list
+    NodePtr evenHead = nullptr; // Head of the even numbers list
+    NodePtr oddTail = nullptr; // Tail of the odd numbers list
+    NodePtr evenTail = nullptr; // Tail of the even numbers list
 
+    NodePtr current = head;
 
-NodePtr mergeSortedLists(NodePtr list1, NodePtr list2) {
-    //TODO:
+    while (current != nullptr) {
+        if (current->data % 2 == 0) { // Even number
+            if (evenHead == nullptr) {
+                evenHead = current;
+                evenTail = current;
+            }
+            else {
+                evenTail->next = current;
+                evenTail = evenTail->next;
+            }
+        }
+        else { // Odd number
+            if (oddHead == nullptr) {
+                oddHead = current;
+                oddTail = current;
+            }
+            else {
+                oddTail->next = current;
+                oddTail = oddTail->next;
+            }
+        }
+        current = current->next;
+    }
 
+    // Connect the odd list with the even list
+    if (oddTail != nullptr)
+        oddTail->next = evenHead;
+    if (evenTail != nullptr)
+        evenTail->next = nullptr; // Terminate the even list
 
-    
+    // Return the head of the rearranged list
+    return (oddHead != nullptr) ? oddHead : evenHead;
 }
 
 

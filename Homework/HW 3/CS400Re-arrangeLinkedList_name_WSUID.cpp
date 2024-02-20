@@ -4,31 +4,50 @@
 #include <iostream>
 
 struct Node {
-    //TODO:
+    int data;
+    Node* next;
 
+    Node(int d) : data(d), next(nullptr) {}
 };
 
 typedef Node* NodePtr;
 
 // Function to create a new node with the given data
 NodePtr createNode(int data) {
-    //TODO:
-
-
+    return new Node(data);
 }
 
 // Function to print the linked list
 void printList(NodePtr head) {
-    //TODO:
-
-
+    NodePtr current = head;
+    while (current != nullptr) {
+        std::cout << current->data << " ";
+        current = current->next;
+    }
+    std::cout << std::endl;
 }
 
-void rearrangeLinkedList(NodePtr& head) {
-    //TODO:
+// Function to merge two sorted linked lists
+NodePtr mergeSortedLists(NodePtr l1, NodePtr l2) {
+    Node dummy(0); // Dummy node to ease the handling of merged list
+    NodePtr tail = &dummy; // Tail points to the dummy node initially
 
+    while (l1 != nullptr && l2 != nullptr) {
+        if (l1->data <= l2->data) {
+            tail->next = l1;
+            l1 = l1->next;
+        }
+        else {
+            tail->next = l2;
+            l2 = l2->next;
+        }
+        tail = tail->next; // Move tail to the last node
+    }
 
+    // Attach the remaining elements of the non-empty list
+    tail->next = (l1 != nullptr) ? l1 : l2;
 
+    return dummy.next; // Return the merged list starting from the next of dummy node
 }
 
 
