@@ -18,5 +18,8 @@
     <ClCompile Include="J.Kraft_Lab4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="J.Kraft_Lab4Template.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
