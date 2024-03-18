@@ -2,10 +2,12 @@
 #include <stack>
 #include <string>
 
+// Check to see if character is operator.
 bool isOperator(char c) {
     return c == '+' || c == '-' || c == '*' || c == '/';
 }
 
+// If the character is an operator, return the preceding chars (depending on the operator).
 int precedence(char c) {
     if (c == '+' || c == '-')
         return 1;
@@ -14,6 +16,7 @@ int precedence(char c) {
     return 0; // for '('
 }
 
+// Converting the expression.
 std::string infixToPostfix(const std::string& infix) {
     std::string postfix;
     std::stack<char> operators;
@@ -51,9 +54,10 @@ std::string infixToPostfix(const std::string& infix) {
     return postfix;
 }
 
+// Given.
 int main() {
-    //std::string infixExpression = "((A + B) - C * (D/E)) + F";
-    std::string infixExpression = "A + B * C + D";
+    std::string infixExpression = "((A + B) - C * (D/E)) + F";
+    //std::string infixExpression = "A + B * C + D";
     std::string postfixExpression = infixToPostfix(infixExpression);
 
     std::cout << "Infix Expression: " << infixExpression << std::endl;
