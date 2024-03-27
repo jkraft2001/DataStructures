@@ -30,32 +30,56 @@ public:
 
     bool isEmpty() const {
         // TODO:
+        return size == 0;
     }
 
     int getSize() const {
         // TODO:
+        return size;
     }
 
     void addFront(const T& item) {
         // TODO:
+        Node* newNode = new Node(item);
 
+        if (isEmpty()) {
+            head = newNode;
+            tail = newNode;
+            tail->next = head;
+        }
+        else {
+            newNode->next = head;
+            head = newNode;
+            tail->next = head;
+        }
 
-
-
+        size++;
     }
 
     void addBack(const T& item) {
         // TODO:
+        Node* newNode = new Node(item)
 
+        if (isEmpty()) {
+            head = newNode;
+            tail = newNode;
+            tail->next = head;
+        }
+        else {
+            tail->next = newNode;
+            tail = newNode;
+            tail->next = head;
+        }
 
+        size++;
     }
 
 
     void removeFront() {
         // TODO:
-
-
-
+        if (isEmpty()) {
+            cout << "Cannot remove. List is empty." << endl;
+        }
     }
 
 
