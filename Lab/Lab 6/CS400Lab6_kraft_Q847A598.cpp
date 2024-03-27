@@ -3,6 +3,8 @@
 
 #include <iostream>
 
+using namespace std;
+
 template <typename T>
 class CircularLinkedList {
 private:
@@ -20,7 +22,7 @@ private:
 public:
     // constructor:
     CircularLinkedList() : head(nullptr), tail(nullptr), size(0) {}
-    
+
     // destructor:
     ~CircularLinkedList() {
         while (!isEmpty()) {
@@ -58,7 +60,7 @@ public:
 
     void addBack(const T& item) {
         // TODO:
-        Node* newNode = new Node(item)
+        Node* newNode = new Node(item);
 
         if (isEmpty()) {
             head = newNode;
@@ -79,35 +81,94 @@ public:
         // TODO:
         if (isEmpty()) {
             cout << "Cannot remove. List is empty." << endl;
+            return;
         }
+
+        Node* temp = head;
+
+        if (head == tail) {
+            head = nullptr;
+            tail = nullptr;
+        }
+        else {
+            head = head->next;
+            tail->next = head;
+        }
+
+        delete temp;
+        size--;
     }
 
 
     void removeBack() {
         // TODO:
+        if (isEmpty()) {
+            cout << "Cannot remove. List is empty." << endl;
+            return;
+        }
 
+        if (head == tail) {
+            delete head;
+            head = nullptr;
+            tail = nullptr;
+        }
+        else {
+            Node* temp = head;
 
+            while (temp->next != tail) {
+                temp = temp->next;
+            }
 
+            temp->next = head;
+            delete tail;
+            tail = temp;
+        }
+
+        size--;
     }
 
 
     void print() const {
         // TODO:
+        if (isEmpty()) {
+            cout << "List is empty." << endl;
+            return;
+        }
 
+        Node* temp = head;
 
+        do {
+            cout << temp->data;
 
+            if (temp->next != head) {
+                cout << " -> ";
+            }
 
+            temp = temp->next;
+        } while (temp != head);
+        cout << endl;
     }
 };
 
-// implement quque class using composition of circular linked list:
+// implement queue class using composition of circular linked list:
 template <typename T>
 class Queue {
     // TODO:
+private:
+    CircularLinkedList<T> list;
 
+public:
+    void enqueue(const T& item) {
+        list.addBack(item);
+    }
 
+    void dequeue() {
+        list.removeFront();
+    }
 
-    
+    void print() const {
+        list.print();
+    }
 };
 
 int main() {
