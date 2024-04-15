@@ -1,0 +1,3 @@
+﻿  Quiz3Prep_CS400.cpp
+C:\Users\kraft\OneDrive\Desktop\Quiz3Prep_CS400\Quiz3Prep_CS400.cpp(162,29): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  Quiz3Prep_CS400.vcxproj -> C:\Users\kraft\OneDrive\Desktop\Quiz3Prep_CS400\x64\Debug\Quiz3Prep_CS400.exe
