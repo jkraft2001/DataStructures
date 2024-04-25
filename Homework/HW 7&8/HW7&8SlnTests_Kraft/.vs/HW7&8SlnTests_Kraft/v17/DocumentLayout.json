@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kraft\\OneDrive\\Documents\\School\\Spring 2024\\Data Structures\\DataStructures\\Homework\\HW 7\u00268\\HW7\u00268SlnTests_Kraft\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B7464E03-B939-4C3A-99DA-1A79C75CDAC5}|HW7\u00268SlnTests_Kraft.vcxproj|C:\\Users\\kraft\\OneDrive\\Documents\\School\\Spring 2024\\Data Structures\\DataStructures\\Homework\\HW 7\u00268\\HW7\u00268SlnTests_Kraft\\HW7\u00268SlnTests_Kraft.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B7464E03-B939-4C3A-99DA-1A79C75CDAC5}|HW7\u00268SlnTests_Kraft.vcxproj|solutionrelative:HW7\u00268SlnTests_Kraft.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\kraft\\OneDrive\\Documents\\School\\Spring 2024\\Data Structures\\DataStructures\\Homework\\HW 7\u00268\\CS400HuffmanCoding_name_WSUID.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CS400HuffmanCoding_name_WSUID.cpp",
+              "DocumentMoniker": "C:\\Users\\kraft\\OneDrive\\Documents\\School\\Spring 2024\\Data Structures\\DataStructures\\Homework\\HW 7\u00268\\CS400HuffmanCoding_name_WSUID.cpp",
+              "RelativeDocumentMoniker": "..\\CS400HuffmanCoding_name_WSUID.cpp",
+              "ToolTip": "C:\\Users\\kraft\\OneDrive\\Documents\\School\\Spring 2024\\Data Structures\\DataStructures\\Homework\\HW 7\u00268\\CS400HuffmanCoding_name_WSUID.cpp",
+              "RelativeToolTip": "..\\CS400HuffmanCoding_name_WSUID.cpp",
+              "ViewState": "AQIAAH0AAAAAAAAAAAAAAH0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-25T19:33:49.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HW7\u00268SlnTests_Kraft.cpp",
+              "DocumentMoniker": "C:\\Users\\kraft\\OneDrive\\Documents\\School\\Spring 2024\\Data Structures\\DataStructures\\Homework\\HW 7\u00268\\HW7\u00268SlnTests_Kraft\\HW7\u00268SlnTests_Kraft.cpp",
+              "RelativeDocumentMoniker": "HW7\u00268SlnTests_Kraft.cpp",
+              "ToolTip": "C:\\Users\\kraft\\OneDrive\\Documents\\School\\Spring 2024\\Data Structures\\DataStructures\\Homework\\HW 7\u00268\\HW7\u00268SlnTests_Kraft\\HW7\u00268SlnTests_Kraft.cpp",
+              "RelativeToolTip": "HW7\u00268SlnTests_Kraft.cpp",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAQwIAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-25T19:33:37.815Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
