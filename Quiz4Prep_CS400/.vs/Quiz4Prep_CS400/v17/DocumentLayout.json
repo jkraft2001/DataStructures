@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kraft\\OneDrive\\Documents\\School\\Spring 2024\\Data Structures\\DataStructures\\Quiz4Prep_CS400\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EC693B35-8F42-4A42-95C8-7435D4513D63}|Quiz4Prep_CS400.vcxproj|C:\\Users\\kraft\\OneDrive\\Documents\\School\\Spring 2024\\Data Structures\\DataStructures\\Quiz4Prep_CS400\\Quiz4Prep_CS400.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EC693B35-8F42-4A42-95C8-7435D4513D63}|Quiz4Prep_CS400.vcxproj|solutionrelative:Quiz4Prep_CS400.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Quiz4Prep_CS400.cpp",
+              "DocumentMoniker": "C:\\Users\\kraft\\OneDrive\\Documents\\School\\Spring 2024\\Data Structures\\DataStructures\\Quiz4Prep_CS400\\Quiz4Prep_CS400.cpp",
+              "RelativeDocumentMoniker": "Quiz4Prep_CS400.cpp",
+              "ToolTip": "C:\\Users\\kraft\\OneDrive\\Documents\\School\\Spring 2024\\Data Structures\\DataStructures\\Quiz4Prep_CS400\\Quiz4Prep_CS400.cpp",
+              "RelativeToolTip": "Quiz4Prep_CS400.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-30T15:30:05.461Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
