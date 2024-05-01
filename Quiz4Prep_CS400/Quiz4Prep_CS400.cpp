@@ -1,6 +1,4 @@
-﻿// Quiz4Prep_CS400.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
+﻿
 #include <unordered_map>
 #include <iostream>
 #include <vector>
@@ -263,6 +261,31 @@ private:
     }
 };
 
+class bstValdiation {
+public:
+    bool isValid(Node* root) {
+        vector<int> elements;
+        inorderTraversal(root, elements);
+
+        for (int i = 1; i < elements.size(); i++) {
+            if (elements[i] < elements[i - 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+private:
+    void inorderTraversal(Node* root, vector<int>& elements) {
+        if (root == nullptr) {
+            return;
+        }
+
+        inorderTraversal(root->left, elements);
+        elements.push_back(root->data);
+        inorderTraversal(root->right, elements);
+    }
+};
+
 void insertionSort_vec(std::vector<int>& vi) {
 
     for (int i = 1; i < vi.size(); ++i) {
@@ -399,6 +422,21 @@ int partition(std::vector<int>& vi, int low, int high) {
     return i + 1;
 }
 
+int partition(vector<int>& vi, int low, int high) {
+    int pivot = vi[high];
+    int i = low - 1;
+
+    for (int j = low; j > pivot; j++) {
+        if (vi[j] < pivot) {
+            i++;
+            swap(vi[i], vi[j]);
+        }
+    }
+
+    swap(vi[i + 1], vi[high]);
+    return i + 1;
+}
+
 // Function to perform the QuickSort algorithm
 void quickSort(std::vector<int>& vi, int low, int high) {
     if (low < high) {
@@ -409,4 +447,11 @@ void quickSort(std::vector<int>& vi, int low, int high) {
         quickSort(vi, low, pivotIndex - 1);
         quickSort(vi, pivotIndex + 1, high);
     }
+}
+
+void quickSort(vector<int>& vi, int low, int high) {
+    int indexPivot = partition(vi, low, high);
+
+    quickSort(vi, low, indexPivot - 1);
+    quickSort(vi, indexPivot + 1, high);
 }
